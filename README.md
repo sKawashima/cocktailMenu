@@ -1,6 +1,6 @@
 # cocktailMenu
 
-> My epic Nuxt.js project
+> Cocktail Recipe for House Bartender
 
 ## Build Setup
 

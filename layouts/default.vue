@@ -1,57 +1,55 @@
-<template lang="pug">
-  div
-    nav.navbar.has-shadow
-      .navbar-brand
-        nuxt-link.navbar-item.has-text-centered(to='/')
-          font-awesome-icon(icon='cocktail').is-size-4
-        a.navbar-burger#burger(aria-label='menu' aria-expanded='false' @click='toggleBurger')
-          - for (let i = 0;i < 3;i++)
-            span(aria-hidden='true')
-      #mainMenu.navbar-menu.navbar-start(v-bind:class='[{"is-active": isActiveBurger}]')
-        .navbar-item
-          nuxt-link(to='/recipe')
-            font-awesome-icon(icon='clipboard-list').is-size-5
-            span Cocktail
-        .navbar-item
-          nuxt-link(to='/list')
-            font-awesome-icon(icon='wine-bottle').is-size-5
-            span Bottle
-      #userSettings.navbar-menu.navbar-end(v-bind:class='[{"is-active": isActiveBurger}]')
-        .navbar-item
-          .buttons
-            a.button(disabled) ユーザー認証
-    .container
-      nuxt
-    footer.footer
-      .content.has-text-centered
-        p © 2019 sKawashima
+<template>
+  <div>
+    <nuxt />
+  </div>
 </template>
 
-<style scoped lang='sass'>
-.navbar-item
-  span
-    padding-left: 0.5em
+<style>
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
+}
+
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--grey:hover {
+  color: #fff;
+  background-color: #35495e;
+}
 </style>
-
-<script lang="ts">
-import Vue from 'vue'
-
-let vm
-export default Vue.extend({
-  data: () => {
-    return {
-      isActiveBurger: 0
-    }
-  },
-  created() {
-    vm = this
-  },
-  methods: {
-    toggleBurger: () => {
-      // console.log('clicked burger')
-      vm.isActiveBurger = ~vm.isActiveBurger
-      // console.log(vm.isActiveBurger)
-    }
-  }
-})
-</script>

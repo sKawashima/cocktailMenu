@@ -1,4 +1,4 @@
-import pkg from './package.json'
+import pkg from './package'
 
 export default {
   mode: 'spa',
@@ -21,7 +21,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#D7C4BB' },
 
   /*
   ** Global CSS
@@ -41,19 +41,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
-    '@nuxtjs/pwa',
-    'nuxt-fontawesome'
+    '@nuxtjs/pwa'
   ],
-  fontawesome: {
-    imports: [
-      {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
-      }
-    ]
-  },
   /*
   ** Axios module configuration
   */
@@ -65,13 +54,6 @@ export default {
   ** Build configuration
   */
   build: {
-    postcss: {
-      preset: {
-        features: {
-          customProperties: false
-        }
-      }
-    },
     /*
     ** You can extend webpack config here
     */
