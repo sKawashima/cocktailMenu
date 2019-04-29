@@ -55,7 +55,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-function newFunction() {
-  return this;
-}
