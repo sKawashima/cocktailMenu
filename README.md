@@ -1,4 +1,5 @@
 # cocktailMenu
+![](https://img.shields.io/badge/GW%20WORKS-2019-blueviolet.svg)
 
 > Cocktail Recipe for House Bartender
 
@@ -18,5 +19,3 @@ $ npm start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
