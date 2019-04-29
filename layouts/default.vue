@@ -48,9 +48,9 @@ export default Vue.extend({
   },
   methods: {
     toggleBurger: () => {
-      console.log('clicked burger')
+      // console.log('clicked burger')
       vm.isActiveBurger = ~vm.isActiveBurger
-      console.log(vm.isActiveBurger)
+      // console.log(vm.isActiveBurger)
     }
   }
 })
