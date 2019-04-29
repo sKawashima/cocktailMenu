@@ -13,5 +13,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'indent': 'warn',
+    'no-console': 'warn',
+    'space-before-function-paren': 'warn'
   }
 }
