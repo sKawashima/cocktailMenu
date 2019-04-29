@@ -27,6 +27,7 @@ export default {
   ** Global CSS
   */
   css: [
+    'reset-css'
   ],
 
   /*
@@ -41,7 +42,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'nuxt-fontawesome'
   ],
   /*
   ** Axios module configuration
@@ -68,5 +70,15 @@ export default {
         })
       }
     }
-  }
+  },
+
+  fontawesome: {
+    component: 'fa',
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      }
+    ]
+  },
 }
