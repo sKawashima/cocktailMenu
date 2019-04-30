@@ -1,68 +1,37 @@
-<template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        cocktailMenu
-      </h1>
-      <h2 class="subtitle">
-        Cocktail Recipe for House Bartender
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div>
-  </section>
+<template lang='pug'>
+section.container
+  #hero
+    h1.inner
+      fa.icon(icon='cocktail')
+      |  Cocktail Menu
+    p.inner 家でカクテルを作る人のためのカクテルデータベース
+  List.inner
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import List from '~/components/List.vue'
 
 export default {
   components: {
-    Logo
+    List
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="sass" scoped>
+@import '~assets/sass/variable'
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+#hero
+  padding: 2em
+  background-color: darken($theme-color, 75)
+  color: #fff
+  h1
+    font-size: 2rem
+    font-weight: bold
+  p
+    margin-top: 1.5em
+.inner
+  display: block
+  max-width: 1080px
+  margin: 0 auto
 </style>

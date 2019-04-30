@@ -1,8 +1,8 @@
 # cocktailMenu
 
-![GW WORKS2019](https://img.shields.io/badge/GW%20WORKS-2019-blueviolet.svg)
+![sK GW WORKS2019](https://img.shields.io/badge/GW%20WORKS-2019-blueviolet.svg)
 
-> Cocktail Recipe for House Bartender
+> Cocktail Recipe Database for House Bartender
 
 ## Build Setup
 
