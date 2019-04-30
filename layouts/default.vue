@@ -1,5 +1,5 @@
 <template lang='pug'>
-  div
+  #container
     nav#nav
       .brand
         nuxt-link(to='/').button.logo
@@ -15,10 +15,17 @@
           fa.icon(icon='wine-bottle')
           p Bottles
     nuxt#main
+    footer
+      p © 2019 sKawashima
 </template>
 
 <style lang='sass' scoped>
 $theme-color: #ffeed3
+
+#container
+  display: flex
+  flex-direction: column
+  min-height: 100vh
 
 #nav
   display: flex
@@ -65,7 +72,23 @@ $theme-color: #ffeed3
   .is-active
     display: flex
 #main
+  margin: 2em 0
+  flex-grow: 1
+footer
+  width: 100vw
+  height: 4em
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: desaturate($theme-color, 100)
+</style>
+
+<style lang="sass">
+$theme-color: #ffeed3
+
+body
   background-color: $theme-color
+  min-height: 100vh
 </style>
 
 <script lang="ts">
