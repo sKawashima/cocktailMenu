@@ -7,6 +7,9 @@
 ## Build Setup
 
 ``` bash
+# setting githook
+$ echo "npm run precommit" > .git/hooks/pre-commit
+
 # install dependencies
 $ npm install
 
