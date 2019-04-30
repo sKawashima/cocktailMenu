@@ -1,21 +1,37 @@
 <template lang='pug'>
 section.container
   #hero
-    h1 Cocktail Menu
-    p Cocktail Recipe Database for House Bartender
+    h1.inner
+      fa.icon(icon='cocktail')
+      |  Cocktail Menu
+    p.inner 家でカクテルを作る人のためのカクテルデータベース
+  List.inner
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import List from '~/components/List.vue'
 
 export default {
   components: {
-    Logo
+    List
   }
 }
 </script>
 
 <style lang="sass" scoped>
+@import '~assets/sass/variable'
+
 #hero
-  padding: 0 2em
+  padding: 2em
+  background-color: darken($theme-color, 75)
+  color: #fff
+  h1
+    font-size: 2rem
+    font-weight: bold
+  p
+    margin-top: 1.5em
+.inner
+  display: block
+  max-width: 1080px
+  margin: 0 auto
 </style>

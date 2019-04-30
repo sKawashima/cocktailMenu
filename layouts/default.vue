@@ -19,8 +19,17 @@
       p © 2019 sKawashima
 </template>
 
+<style lang="sass">
+@import '~assets/sass/variable'
+
+body
+  background-color: $theme-color
+  min-height: 100vh
+  font-family: 'Playfair Display', 'Yu Mincho', 'YuMincho', serif
+</style>
+
 <style lang='sass' scoped>
-$theme-color: #ffeed3
+@import '~assets/sass/variable'
 
 #container
   display: flex
@@ -32,6 +41,7 @@ $theme-color: #ffeed3
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.6))
   background-color: darken($theme-color, 20)
   padding: 0 .5em
+  font-weight: bold
   a
     color: #111
     text-decoration: none
@@ -81,14 +91,6 @@ footer
   justify-content: center
   align-items: center
   background-color: desaturate($theme-color, 100)
-</style>
-
-<style lang="sass">
-$theme-color: #ffeed3
-
-body
-  background-color: $theme-color
-  min-height: 100vh
 </style>
 
 <script lang="ts">
