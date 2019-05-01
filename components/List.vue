@@ -1,7 +1,10 @@
 <template lang="pug">
 section
   - for(let i = 0;i < 8;i++)
-    ListItem.item
+    ListItem.item(
+      name='カルーア・ミルク',
+      alcohol='12'
+    )
 </template>
 
 <style lang="sass" scoped>
