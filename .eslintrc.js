@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'indent': 'warn',
     'no-console': 'warn',
-    'space-before-function-paren': 'warn'
+    'space-before-function-paren': 'warn',
+    'no-unused-vars': 'warn'
   }
 }

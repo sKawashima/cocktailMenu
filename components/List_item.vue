@@ -9,7 +9,6 @@ a
 
 <script lang="ts">
 import Vue from 'vue'
-let vm
 
 export default Vue.extend({
   props: {
@@ -37,13 +36,10 @@ export default Vue.extend({
       material: 'エラー'
     }
   },
-  created() {
-    vm = this
-  },
   mounted() {
-    console.log(vm)
+    // console.log(vm)
     // console.log(Array.isArray(Array(this.materials)))
-    this.material = String(vm.materials.join(', '))
+    this.material = this.materials.join(', ')
   }
 })
 </script>
