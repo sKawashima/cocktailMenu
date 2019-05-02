@@ -4,11 +4,12 @@ a
   h3 {{name}}
   p {{alcohol}}度
   p {{taste}}
-  p {{materials}}
+  p {{material}}
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+let vm
 
 export default Vue.extend({
   props: {
@@ -17,16 +18,18 @@ export default Vue.extend({
       default: 'おいしいカクテル'
     },
     alcohol: {
-      type: String,
-      default: '0'
+      type: Number,
+      default: 0
     },
     taste: {
       type: String,
       default: 'おいしい'
     },
     materials: {
-      type: String,
-      default: '["水"]'
+      type: Array,
+      default: () => {
+        return []
+      }
     }
   },
   data: () => {
@@ -34,10 +37,13 @@ export default Vue.extend({
       material: 'エラー'
     }
   },
+  created() {
+    vm = this
+  },
   mounted() {
-    // console.log(this.materials)
+    console.log(vm)
     // console.log(Array.isArray(Array(this.materials)))
-    // this.material = Array(this.materials).join(', ')
+    this.material = String(vm.materials.join(', '))
   }
 })
 </script>
