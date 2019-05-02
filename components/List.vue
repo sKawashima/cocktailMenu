@@ -1,14 +1,24 @@
 <template lang="pug">
-#list
-  h2 新着カクテル
-  p ここに新着がずらーってなる
+section
+  - for(let i = 0;i < 8;i++)
+    ListItem.item(
+      name= 'カルーア・ミルク',
+      :alcohol= 12,
+      taste= '甘口',
+      :materials= ['カルーア・コーヒー・リキュール', '牛乳']
+    )
 </template>
 
 <style lang="sass" scoped>
-#list
-  margin-top: 2em
-  h2
-    font-weight: bold
-    font-size: 1.5rem
-    margin: 0 0 1rem
 </style>
+
+<script lang="ts">
+import ListItem from '~/components/List_item.vue'
+import Vue from 'vue'
+
+export default Vue.extend({
+  components: {
+    ListItem
+  }
+})
+</script>

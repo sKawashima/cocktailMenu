@@ -5,7 +5,9 @@ section.container
       fa.icon(icon='cocktail')
       |  Cocktail Menu
     p.inner 家でカクテルを作る人のためのカクテルデータベース
-  List.inner
+  #list.inner
+    h2 新着カクテル
+    List
 </template>
 
 <script>
@@ -21,6 +23,10 @@ export default {
 <style lang="sass" scoped>
 @import '~assets/sass/variable'
 
+.inner
+  display: block
+  max-width: 1080px
+  margin: 0 auto
 #hero
   padding: 2em
   background-color: darken($theme-color, 75)
@@ -30,8 +36,11 @@ export default {
     font-weight: bold
   p
     margin-top: 1.5em
-.inner
-  display: block
-  max-width: 1080px
-  margin: 0 auto
+#list
+  margin-top: 2em
+  padding: 0 1em
+  h2
+    font-weight: bold
+    font-size: 1.5rem
+    margin: 0 0 1rem
 </style>
