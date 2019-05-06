@@ -7,6 +7,11 @@ a
   p {{material}}
 </template>
 
+<style lang="sass" scoped>
+h3
+  font-weight: bold
+</style>
+
 <script lang="ts">
 import Vue from 'vue'
 
