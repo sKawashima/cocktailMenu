@@ -34,6 +34,7 @@ import Vue from 'vue'
 
 let simplemde
 let materialTag
+let vm
 
 export default Vue.extend({
   data: () => {
@@ -41,30 +42,38 @@ export default Vue.extend({
       name: '',
       alcohol: '',
       taste: '',
-      material: [],
+      materials: [],
       material_list: ['カルーア コーヒー リキュール'],
       recipe: ''
     }
   },
   mounted() {
+    vm = this
     simplemde = new SimpleMDE({
       spellChecker: false
     })
 
     if (document.getElementById('material_tag') !== null) {
-      materialTag = new Taggle(document.getElementById('material_tag') || 'error', {})
+      materialTag = new Taggle(document.getElementById('material_tag') || 'error', {
+        onTagAdd: (e, tag) => {
+          vm.addMaterial(tag)
+        }
+      })
     }
     // document.getElementById('material_tag') || 'error'部は、ライブラリがelまたはstringしか受け付けないためnull回避
   },
   methods: {
-    confirm: function () {
-      this.recipe = simplemde.value() // マークダウンエディタ処理
+    confirm: () => {
+      vm.recipe = simplemde.value() // マークダウンエディタ処理
 
-      // console.log(`カクテル名: ${this.name}`)
-      // console.log(`度数: ${this.alcohol}`)
-      // console.log(`テイスト: ${this.taste}`)
-      // console.log(`材料: 材料`)
-      // console.log(`レシピ: ${this.recipe}`)
+      // console.log(`カクテル名: ${vm.name}`)
+      // console.log(`度数: ${vm.alcohol}`)
+      // console.log(`テイスト: ${vm.taste}`)
+      console.log(`材料: ${vm.materials}`)
+      console.log(`レシピ: ${vm.recipe}`)
+    },
+    addMaterial: (tag) => {
+      vm.materials.push(tag)
     }
   }
 })
