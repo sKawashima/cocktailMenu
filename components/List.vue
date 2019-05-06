@@ -1,6 +1,6 @@
 <template lang="pug">
-section
-  - for(let i = 0;i < 8;i++)
+section.list
+  - for(let i = 0;i < 16;i++)
     ListItem.item(
       name= 'カルーア・ミルク',
       :alcohol= 12,
@@ -10,6 +10,11 @@ section
 </template>
 
 <style lang="sass" scoped>
+.item
+  margin: 0 2em 2em
+.list
+  display: flex
+  flex-wrap: wrap
 </style>
 
 <script lang="ts">
