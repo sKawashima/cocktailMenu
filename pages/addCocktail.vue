@@ -34,7 +34,9 @@ export default Vue.extend({
     return {
       name: '',
       alcohol: '',
-      taste: ''
+      taste: '',
+      material: [],
+      material_list: ['カルーア コーヒー リキュール']
     }
   },
   methods: {
