@@ -39,6 +39,8 @@ export default Vue.extend({
       material_list: ['カルーア コーヒー リキュール']
     }
   },
+  created() {
+  },
   methods: {
     confirm: function () {
       console.log(`カクテル名: ${this.name}`)
