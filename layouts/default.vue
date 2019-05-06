@@ -14,6 +14,9 @@
         nuxt-link(to='/').button
           fa.icon(icon='wine-bottle')
           p Bottles
+        nuxt-link(to='addCocktail').button
+          fa.icon(icon='plus-circle')
+          p add Cocktail
     nuxt#main
     footer
       p © 2019 sKawashima
@@ -26,6 +29,12 @@ body
   background-color: $theme-color
   min-height: 100vh
   font-family: 'Playfair Display', 'Yu Mincho', 'YuMincho', serif
+
+.inner
+  display: block
+  max-width: 1080px
+  margin: 0 auto
+  padding: 0 1em
 </style>
 
 <style lang='sass' scoped>

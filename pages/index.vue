@@ -1,10 +1,11 @@
 <template lang='pug'>
 section.container
   #hero
-    h1.inner
-      fa.icon(icon='cocktail')
-      |  Cocktail Menu
-    p.inner 家でカクテルを作る人のためのカクテルデータベース
+    .inner
+      h1
+        fa.icon(icon='cocktail')
+        |  Cocktail Menu
+      p 家でカクテルを作る人のためのカクテルデータベース
   #list.inner
     h2 新着カクテル
     List
@@ -23,12 +24,8 @@ export default {
 <style lang="sass" scoped>
 @import '~assets/sass/variable'
 
-.inner
-  display: block
-  max-width: 1080px
-  margin: 0 auto
 #hero
-  padding: 2em
+  padding: 2em 1em
   background-color: darken($theme-color, 75)
   color: #fff
   h1
@@ -38,7 +35,6 @@ export default {
     margin-top: 1.5em
 #list
   margin-top: 2em
-  padding: 0 1em
   h2
     font-weight: bold
     font-size: 1.5rem
