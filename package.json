@@ -24,7 +24,8 @@
     "nuxt": "^2.4.0",
     "nuxt-fontawesome": "^0.4.0",
     "reset-css": "^4.0.1",
-    "simplemde": "^1.11.2"
+    "simplemde": "^1.11.2",
+    "taggle": "^1.14.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
