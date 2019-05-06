@@ -23,7 +23,6 @@ section.container
       label レシピ
       #simplemde
         textarea#recipeEditor
-      //- TODO やる
       .blank
       a.button(@click='confirm') 確認
 </template>
