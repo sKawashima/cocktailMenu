@@ -23,11 +23,37 @@ section.container
       label レシピ
       p // あとでつくる
       //- TODO やる
+      .blank
+      a.button(@click='confirm') 確認
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data: () => {
+    return {
+      name: '',
+      alcohol: '',
+      taste: ''
+    }
+  },
+  methods: {
+    confirm: function () {
+      console.log(`カクテル名: ${this.name}`)
+      console.log(`度数: ${this.alcohol}`)
+      console.log(`テイスト: ${this.taste}`)
+      console.log(`材料: 材料`)
+      console.log(`レシピ: レシピ`)
+    }
+  }
+})
+</script>
+
 <style lang="sass" scoped>
+@import '~assets/sass/variable'
+
 .inner
-  margin: 0 1em
+  margin: 0 auto
   background-color: #fff
   padding: 2em 1em
   border-radius: 1em
@@ -47,28 +73,23 @@ form
     text-align: right
   select
     font-size: 1em
-.w
-  display: flex
-  p
-    line-height: 2em
-    margin-left: .5em
-
+  .w
+    display: flex
+    p
+      line-height: 2em
+      margin-left: .5em
+  .button
+    display: block
+    padding: 1em
+    background-color: #fff
+    color: darken($theme-color, 40)
+    border: 1px solid darken($theme-color, 40)
+    border-radius: .5em
+    text-align: center
+    width: 3em
+    transition: .1s
+    &:hover
+      background-color: darken($theme-color, 40)
+      border: 1px solid darken($theme-color, 40)
+      color: #fff
 </style>
-
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  data: () => {
-    return {
-      name: '',
-      alcohol: '',
-      taste: ''
-    }
-  },
-  watch: {
-    name: () => {
-      console.log(`input`)
-    }
-  }
-})
-</script>
