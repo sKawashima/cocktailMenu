@@ -31,8 +31,10 @@ import SimpleMDE from 'simplemde'
 import 'simplemde/dist/simplemde.min.css'
 import Taggle from 'taggle'
 import Vue from 'vue'
+import _pull from 'lodash/pull'
 
 let simplemde
+// eslint-disable-next-line
 let materialTag
 let vm
 
@@ -54,26 +56,31 @@ export default Vue.extend({
     })
 
     if (document.getElementById('material_tag') !== null) {
+      // document.getElementById('material_tag') || 'error'部は、ライブラリがelまたはstringしか受け付けないためnull回避
       materialTag = new Taggle(document.getElementById('material_tag') || 'error', {
         onTagAdd: (e, tag) => {
           vm.addMaterial(tag)
+        },
+        onTagRemove: (e, tag) => {
+          vm.removeMaterial(tag)
         }
       })
     }
-    // document.getElementById('material_tag') || 'error'部は、ライブラリがelまたはstringしか受け付けないためnull回避
   },
   methods: {
     confirm: () => {
       vm.recipe = simplemde.value() // マークダウンエディタ処理
-
       // console.log(`カクテル名: ${vm.name}`)
       // console.log(`度数: ${vm.alcohol}`)
       // console.log(`テイスト: ${vm.taste}`)
-      console.log(`材料: ${vm.materials}`)
-      console.log(`レシピ: ${vm.recipe}`)
+      // console.log(`材料: ${vm.materials}`)
+      // console.log(`レシピ: ${vm.recipe}`)
     },
     addMaterial: (tag) => {
       vm.materials.push(tag)
+    },
+    removeMaterial: (tag) => {
+      _pull(vm.materials, tag)
     }
   }
 })
