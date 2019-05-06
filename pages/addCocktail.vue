@@ -18,10 +18,9 @@ section.container
         option 中辛口
         option 辛口
       label 材料
-      p // あとでつくる
-      //- TODO やる
+      #material_tag
       label レシピ
-      #simplemde
+      #recipe_input
         textarea#recipeEditor
       .blank
       a.button(@click='confirm') 確認
@@ -30,10 +29,12 @@ section.container
 <script lang="ts">
 import SimpleMDE from 'simplemde'
 import 'simplemde/dist/simplemde.min.css'
-
+import Taggle from 'taggle'
 import Vue from 'vue'
 
 let simplemde
+let materialTag
+
 export default Vue.extend({
   data: () => {
     return {
@@ -49,6 +50,11 @@ export default Vue.extend({
     simplemde = new SimpleMDE({
       spellChecker: false
     })
+
+    if (document.getElementById('material_tag') !== null) {
+      materialTag = new Taggle(document.getElementById('material_tag') || 'error', {})
+    }
+    // document.getElementById('material_tag') || 'error'部は、ライブラリがelまたはstringしか受け付けないためnull回避
   },
   methods: {
     confirm: function () {
