@@ -30,6 +30,7 @@ section.container
 import SimpleMDE from 'simplemde'
 import 'simplemde/dist/simplemde.min.css'
 import Taggle from 'taggle'
+import 'taggle/src/minimal.css'
 import Vue from 'vue'
 import _pull from 'lodash/pull'
 
@@ -133,4 +134,7 @@ form
       background-color: darken($theme-color, 40)
       border: 1px solid darken($theme-color, 40)
       color: #fff
+  #material_tag
+    border: 1px solid #ccc
+    padding: 3px 3px 0
 </style>
