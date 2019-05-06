@@ -21,14 +21,20 @@ section.container
       p // あとでつくる
       //- TODO やる
       label レシピ
-      p // あとでつくる
+      #simplemde
+        textarea#recipeEditor
       //- TODO やる
       .blank
       a.button(@click='confirm') 確認
 </template>
 
 <script lang="ts">
+import SimpleMDE from 'simplemde'
+import 'simplemde/dist/simplemde.min.css'
+
 import Vue from 'vue'
+
+let simplemde
 export default Vue.extend({
   data: () => {
     return {
@@ -36,18 +42,24 @@ export default Vue.extend({
       alcohol: '',
       taste: '',
       material: [],
-      material_list: ['カルーア コーヒー リキュール']
+      material_list: ['カルーア コーヒー リキュール'],
+      recipe: ''
     }
   },
-  created() {
+  mounted() {
+    simplemde = new SimpleMDE({
+      spellChecker: false
+    })
   },
   methods: {
     confirm: function () {
-      console.log(`カクテル名: ${this.name}`)
-      console.log(`度数: ${this.alcohol}`)
-      console.log(`テイスト: ${this.taste}`)
-      console.log(`材料: 材料`)
-      console.log(`レシピ: レシピ`)
+      this.recipe = simplemde.value() // マークダウンエディタ処理
+
+      // console.log(`カクテル名: ${this.name}`)
+      // console.log(`度数: ${this.alcohol}`)
+      // console.log(`テイスト: ${this.taste}`)
+      // console.log(`材料: 材料`)
+      // console.log(`レシピ: ${this.recipe}`)
     }
   }
 })
@@ -56,10 +68,13 @@ export default Vue.extend({
 <style lang="sass" scoped>
 @import '~assets/sass/variable'
 
+.container
+  padding: 0 1em
+
 .inner
   margin: 0 auto
   background-color: #fff
-  padding: 2em 1em
+  padding: 2em
   border-radius: 1em
 h1
   font-size: 1.5rem
@@ -69,6 +84,7 @@ form
   display: grid
   grid-template-columns: auto 1fr
   grid-gap: 1.5em .5em
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif
   input
     font-size: 1.1em
     padding-left: 0.5em
