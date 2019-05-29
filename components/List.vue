@@ -15,6 +15,7 @@ section.list
 .list
   display: flex
   flex-wrap: wrap
+  justify-content: space-between
 </style>
 
 <script lang="ts">

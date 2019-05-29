@@ -22,6 +22,8 @@ section.container
       label レシピ
       #recipe_input
         textarea#recipeEditor
+      label 出典
+      input(type='text' v-model='from')
       .blank
       a.button(@click='confirm') 確認
 </template>
@@ -47,7 +49,8 @@ export default Vue.extend({
       taste: '',
       materials: [],
       material_list: ['カルーア コーヒー リキュール'],
-      recipe: ''
+      recipe: '',
+      from: ''
     }
   },
   mounted() {
@@ -104,7 +107,7 @@ h1
 form
   margin-top: 2em
   display: grid
-  grid-template-columns: auto 1fr
+  grid-template-columns: 1fr
   grid-gap: 1.5em .5em
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif
   input
@@ -112,7 +115,6 @@ form
     padding-left: 0.5em
   label
     line-height: 2em
-    text-align: right
   select
     font-size: 1em
   .w

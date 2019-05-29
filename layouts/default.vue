@@ -1,21 +1,18 @@
 <template lang='pug'>
   #container
-    nav#nav
+    nav#nav.inner
       .brand
         nuxt-link(to='/').button.logo
-          fa.icon(icon='cocktail')
+          | Cocktail Menu
         .burger
           a.button(@click='updateBurgerStatus')
             fa.icon(icon='bars')
       .menu(v-bind:class='[{"is-active": isActive}]')
         nuxt-link(to='/').button
-          fa.icon(icon='clipboard-list')
           p Cocktail List
         nuxt-link(to='/').button
-          fa.icon(icon='wine-bottle')
           p Bottles
-        nuxt-link(to='addCocktail').button
-          fa.icon(icon='plus-circle')
+        nuxt-link(to='new').button
           p add Cocktail
     nuxt#main
     footer
@@ -26,9 +23,9 @@
 @import '~assets/sass/variable'
 
 body
-  background-color: $theme-color
+  background-color: #fff
   min-height: 100vh
-  font-family: 'Playfair Display', 'Yu Mincho', 'YuMincho', serif
+  font-family: 'Hannari', 'Yu Mincho', 'YuMincho', serif
 
 .inner
   display: block
@@ -46,28 +43,27 @@ body
   min-height: 100vh
 
 #nav
+  margin-top: 1em
   display: flex
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.6))
-  background-color: darken($theme-color, 20)
   padding: 0 .5em
   font-weight: bold
+  width: 100%
   a
-    color: #111
+    color: $theme-color
     text-decoration: none
+    &:hover
+      text-decoration: underline
   @media screen and (max-width: 768px)
     flex-direction: column
     padding: 0
   .brand
     display: flex
     justify-content: space-between
-    .logo
-      color: darken(saturate($theme-color, 80%), 60)
   .menu
     display: flex
     @media screen and (max-width: 768px)
       display: none
       flex-direction: column
-      background-color: darken($theme-color, 7)
   .burger
     display: none
     @media screen and (max-width: 768px)
@@ -77,21 +73,14 @@ body
           background-color: inherit
   .button
     display: flex
-    padding: 1em
+    padding: 1em 0
     align-items: center
-    margin-right: 0.5em
+    margin-right: 2em
     @media screen and (max-width: 768px)
       margin-right: 0
-    p
-      margin: 0 0.5em
-    &:hover
-      background-color: lighten(darken($theme-color, 20), 10)
-  .icon
-    font-size: 1.5em
   .is-active
     display: flex
 #main
-  margin: 2em 0
   flex-grow: 1
 footer
   width: 100vw
@@ -99,7 +88,8 @@ footer
   display: flex
   justify-content: center
   align-items: center
-  background-color: desaturate($theme-color, 100)
+  background-color: $theme-color
+  color: #fff
 </style>
 
 <script lang="ts">
