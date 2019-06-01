@@ -35,6 +35,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/firebase'
   ],
 
   /*
@@ -43,6 +44,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     'nuxt-fontawesome',
     'nuxt-webfontloader'

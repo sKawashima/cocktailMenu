@@ -7,6 +7,17 @@ section.container
 
 <script>
 import List from '~/components/List.vue'
+import firebase from '~/plugins/firebase'
+import 'firebase/firestore'
+
+const db = firebase.firestore()
+// const settings = { timestampsInSnapshots: true }
+
+/**
+ * @todo Vueの中にFirebaseの関数を埋めて情報をロードする
+ * @body dbを登録できるように鳴ったら色々やる
+ */
+db.settings({})
 
 export default {
   components: {

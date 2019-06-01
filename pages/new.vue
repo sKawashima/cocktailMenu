@@ -25,7 +25,7 @@ section.container
       label 出典
       input(type='text' v-model='from')
       .blank
-      a.button(@click='confirm') 確認
+      a.button(@click='send') 送信
 </template>
 
 <script lang="ts">
@@ -35,6 +35,10 @@ import Taggle from 'taggle'
 import 'taggle/src/minimal.css'
 import Vue from 'vue'
 import _pull from 'lodash/pull'
+import firebase from '~/plugins/firebase'
+import 'firebase/firestore'
+
+const db = firebase.firestore()
 
 let simplemde
 // eslint-disable-next-line
@@ -70,15 +74,26 @@ export default Vue.extend({
         }
       })
     }
+    // db.settings({})
   },
   methods: {
-    confirm: () => {
-      vm.recipe = simplemde.value() // マークダウンエディタ処理
-      // console.log(`カクテル名: ${vm.name}`)
-      // console.log(`度数: ${vm.alcohol}`)
-      // console.log(`テイスト: ${vm.taste}`)
-      // console.log(`材料: ${vm.materials}`)
-      // console.log(`レシピ: ${vm.recipe}`)
+    send: function () {
+      this.recipe = simplemde.value() // マークダウンエディタ処理
+      const collection = db.collection('cocktail_test')
+      collection.add({
+        name: this.name,
+        alcohol: this.alcohol,
+        taste: this.taste,
+        materials: this.materials,
+        recipe: this.recipe,
+        from: this.from
+      })
+      console.log(`カクテル名: ${this.name}`)
+      console.log(`度数: ${this.alcohol}`)
+      console.log(`テイスト: ${this.taste}`)
+      console.log(`材料: ${this.materials}`)
+      console.log(`レシピ: ${this.recipe}`)
+      console.log(`出典: ${this.from}`)
     },
     addMaterial: (tag) => {
       vm.materials.push(tag)
