@@ -58,7 +58,7 @@
     "require-extension-hooks-vue": "^2.0.0",
     "sass-loader": "^7.1.0",
     "ts-loader": "^5.4.4",
-    "ts-node": "^8.1.0",
+    "ts-node": "^8.3.0",
     "typescript": "^3.4.5"
   }
 }
