@@ -9,13 +9,10 @@ module.exports = {
   },
   extends: [
     '@nuxtjs',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    'standard'
   ],
   // add your custom rules here
   rules: {
-    'indent': 'warn',
-    'no-console': 'warn',
-    'space-before-function-paren': 'warn',
-    'no-unused-vars': 'warn'
   }
 }

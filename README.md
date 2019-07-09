@@ -1,25 +1,22 @@
 # cocktailMenu
 
-![sK GW WORKS2019](https://img.shields.io/badge/GW%20WORKS-2019-blueviolet.svg)
-
-> Cocktail Recipe Database for House Bartender
+> My remarkable Nuxt.js project
 
 ## Build Setup
 
 ``` bash
-# setting githook
-$ echo "npm run precommit" > .git/hooks/pre-commit
-
 # install dependencies
-$ npm install
+$ yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ yarn build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ yarn generate
 ```
+
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
