@@ -19,4 +19,12 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+## Test
+
+``` bash
+# normal test
+$ yarn test
+
+# update snapshots
+$ yarn test -- -u
+```

@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <logo />
+      <Label />
       <h1 class="title">
         cocktailMenu
       </h1>
@@ -30,10 +31,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Label from '~/components/atoms/Label.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Label
   }
 }
 </script>
