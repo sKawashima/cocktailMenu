@@ -2,6 +2,10 @@
 
 > My remarkable Nuxt.js project
 
+|master|all|
+|:-:|:-:|
+|[![wercker status](https://app.wercker.com/status/dcc4f8d55c410999276b07b4af257cff/m/master "wercker status")](https://app.wercker.com/project/byKey/dcc4f8d55c410999276b07b4af257cff)|[![wercker status](https://app.wercker.com/status/dcc4f8d55c410999276b07b4af257cff/m/ "wercker status")](https://app.wercker.com/project/byKey/dcc4f8d55c410999276b07b4af257cff)|
+
 ## Build Setup
 
 ``` bash

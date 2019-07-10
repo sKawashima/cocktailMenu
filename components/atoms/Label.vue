@@ -3,10 +3,13 @@ label.label {{text}}
 </template>
 
 <script>
-let vm
-
 export default {
-  props: ['text']
+  props: {
+    text: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
 
