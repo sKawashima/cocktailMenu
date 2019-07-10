@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots atoms/Input simple 1`] = `
+<input
+  class="input"
+/>
+`;
+
 exports[`Storyshots atoms/Label simple 1`] = `
 <label
   class="label"
