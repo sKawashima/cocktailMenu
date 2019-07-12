@@ -35,7 +35,7 @@ build:
       url: $SLACK
       icon_url: https://bysk.slack.com/files/U0J8H1V6D/FL3TR42N5/_________________-_________75083023_________________.png
       username: wercker通知さん
-      custom_message: generateテストが終わったわよ $WERCKER_RUN_URL
+      custom_message: generateテストが終わったよ $WERCKER_RUN_URL
 lint:
   steps:
     - script:
@@ -49,7 +49,7 @@ lint:
       url: $SLACK
       icon_url: https://bysk.slack.com/files/U0J8H1V6D/FL3TR42N5/_________________-_________75083023_________________.png
       username: wercker通知さん
-      custom_message: lintチェックが終わったわよ $WERCKER_RUN_URL
+      custom_message: lintチェックが終わったよ $WERCKER_RUN_URL
 test:
   steps:
     - script:
@@ -63,4 +63,4 @@ test:
       url: $SLACK
       icon_url: https://bysk.slack.com/files/U0J8H1V6D/FL3TR42N5/_________________-_________75083023_________________.png
       username: wercker通知さん
-      custom_message: Jestテストが終わったわよ $WERCKER_RUN_URL
+      custom_message: Jestテストが終わったよ $WERCKER_RUN_URL
