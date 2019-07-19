@@ -23,7 +23,7 @@
     "pug-plain-loader": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
+    "@babel/core": "^7.5.5",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^0.2.1",
     "@storybook/addon-a11y": "^5.1.9",
