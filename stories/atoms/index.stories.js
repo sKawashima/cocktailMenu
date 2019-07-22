@@ -7,7 +7,7 @@ storiesOf('atoms/Label', module)
     components: {
       Label
     },
-    template: `<Label text='カクテル名' />`
+    template: `<Label>カクテル名</Label>`
   }))
 
 storiesOf('atoms/Input', module)

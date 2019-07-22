@@ -1,15 +1,10 @@
 <template lang='pug'>
-label.label {{text}}
+label.label
+  slot
 </template>
 
 <script>
 export default {
-  props: {
-    text: {
-      type: String,
-      required: true
-    }
-  }
 }
 </script>
 
