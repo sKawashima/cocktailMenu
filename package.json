@@ -57,7 +57,7 @@
     "nodemon": "^1.18.9",
     "pug": "^2.0.4",
     "sass-loader": "^7.1.0",
-    "storybook-addon-vue-info": "^1.2.1",
+    "storybook-addon-vue-info": "^1.2.2",
     "vue-jest": "^3.0.3"
   }
 }
