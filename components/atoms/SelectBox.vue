@@ -16,7 +16,10 @@ $theme: #2D1112
 <script>
 export default {
   props: {
-    choices: Array
+    choices: {
+      type: Array,
+      default: () => (['選択肢'])
+    }
   }
 }
 </script>
