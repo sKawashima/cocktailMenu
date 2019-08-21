@@ -17,7 +17,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/axios": "^5.6.0",
     "@nuxtjs/pwa": "^2.6.0",
     "nuxt": "^2.9.1",
     "pug-plain-loader": "^1.0.0"
