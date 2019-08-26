@@ -8,7 +8,7 @@ storiesOf('atoms/Label', module)
     components: {
       Label
     },
-    template: `<Label>カクテル名</Label>`
+    template: '<Label>カクテル名</Label>'
   }))
 
 storiesOf('atoms/Input', module)
@@ -16,7 +16,7 @@ storiesOf('atoms/Input', module)
     components: {
       Input
     },
-    template: `<Input />`
+    template: '<Input />'
   }))
 
 storiesOf('atoms/SelectBox', module)
@@ -24,5 +24,5 @@ storiesOf('atoms/SelectBox', module)
     components: {
       SelectBox
     },
-    template: `<SelectBox v-bind:choices='["1st", "2nd", "3rd"]'/>`
+    template: '<SelectBox v-bind:choices=\'["1st", "2nd", "3rd"]\'/>'
   }))
