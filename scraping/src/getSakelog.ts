@@ -40,7 +40,6 @@ export const getCocktailDetail = async (baseSpirits:string, url:string) => {
   const browser = await Puppeteer.launch()
   const page = await browser.newPage()
 
-  console.log(`GET: ${url}`)
   await page.goto(url)
 
   const pageData = await page.evaluate(() => {
