@@ -26,10 +26,10 @@ build:
     - npm-install
     - script:
       name: install packages
-      code: yarn
+      code: npm i
     - script:
       name: generate test
-      code: yarn generate
+      code: npm run generate
   after-steps:
     - shoya/slack-notifier@1.5.0:
       url: $SLACK
@@ -40,10 +40,10 @@ lint:
   steps:
     - script:
         name: install packages
-        code: yarn
+        code: npm i
     - script:
         name: check lint
-        code: yarn lint
+        code: npm run lint
   after-steps:
     - shoya/slack-notifier@1.5.0:
       url: $SLACK
@@ -54,10 +54,10 @@ test:
   steps:
     - script:
         name: install packages
-        code: yarn
+        code: npm i
     - script:
         name: test
-        code: yarn test
+        code: npm run test
   after-steps:
     - shoya/slack-notifier@1.5.0:
       url: $SLACK
