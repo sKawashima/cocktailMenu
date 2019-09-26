@@ -6,13 +6,13 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "yarn lint",
+    "precommit": "npm run lint",
     "test": "jest",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "yarn lint;yarn generate;firebase deploy",
+    "deploy": "npm run lint;npm run generate;firebase deploy",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

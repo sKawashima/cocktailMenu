@@ -32,7 +32,7 @@ exports[`Storyshots atoms/SelectBox simple 1`] = `
 
 exports[`Storyshots example/Button with some emoji 1`] = `
 <button
-  style="border: 1px solid #eee; border-radius: 3; background-color: rgb(255, 255, 255); cursor: pointer; padding: 3px 10px;"
+  style="border: 1px solid #eee; border-radius: 3; background-color: rgb(255, 255, 255); cursor: pointer; font-size: 15; padding: 3px 10px;"
 >
   😀 😎 👍 💯
 </button>
@@ -40,7 +40,7 @@ exports[`Storyshots example/Button with some emoji 1`] = `
 
 exports[`Storyshots example/Button with text 1`] = `
 <button
-  style="border: 1px solid #eee; border-radius: 3; background-color: rgb(255, 255, 255); cursor: pointer; padding: 3px 10px;"
+  style="border: 1px solid #eee; border-radius: 3; background-color: rgb(255, 255, 255); cursor: pointer; font-size: 15; padding: 3px 10px;"
 >
   Hello Button
 </button>
@@ -67,7 +67,7 @@ exports[`Storyshots example/Welcome to Storybook 1`] = `
     <br />
      
     <code
-      style="font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
+      style="font-size: 15; font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
     >
       src/stories
     </code>
@@ -108,7 +108,7 @@ exports[`Storyshots example/Welcome to Storybook 1`] = `
     <br />
      
     <code
-      style="font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
+      style="font-size: 15; font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
     >
       Button
     </code>
@@ -129,14 +129,14 @@ exports[`Storyshots example/Welcome to Storybook 1`] = `
     
         (Try editing the 
     <code
-      style="font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
+      style="font-size: 15; font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
     >
       Button
     </code>
      component
         located at 
     <code
-      style="font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
+      style="font-size: 15; font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
     >
       src/stories/Button.js
     </code>
@@ -185,7 +185,7 @@ exports[`Storyshots example/Welcome to Storybook 1`] = `
     <br />
      
     <code
-      style="font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
+      style="font-size: 15; font-weight: 600; padding: 2px 5px; border: 1px solid #eae9e9; border-radius: 4; background-color: rgb(243, 242, 242); color: rgb(58, 58, 58);"
     >
       .storybook/webpack.config.js
     </code>
