@@ -1,7 +1,7 @@
 # cocktailMenu
 
-![LGTM-grade](https://img.shields.io/lgtm/grade/javascript/github/sKawashima/cocktailMenu?style=flat-square)
-![LGTM-alert](https://img.shields.io/lgtm/alerts/github/sKawashima/cocktailMenu?style=flat-square)
+[![LGTM-grade](https://img.shields.io/lgtm/grade/javascript/github/sKawashima/cocktailMenu?style=flat-square)](https://lgtm.com/projects/g/sKawashima/cocktailMenu/context:javascript)
+[![LGTM-alert](https://img.shields.io/lgtm/alerts/github/sKawashima/cocktailMenu?style=flat-square)](https://lgtm.com/projects/g/sKawashima/cocktailMenu/alerts/)
 
 ## Build Setup
 
