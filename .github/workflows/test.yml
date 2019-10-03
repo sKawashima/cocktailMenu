@@ -1,4 +1,4 @@
-name: Generate Test
+name: Node Test
 
 on: [push]
 
