@@ -1,5 +1,6 @@
 # cocktailMenu
 
+[![Actions Status](https://github.com/sKawashima/cocktailMenu/workflows/Node%20CI/badge.svg)](https://github.com/sKawashima/cocktailMenu/actions?workflow=Node+CI)
 [![LGTM-grade](https://img.shields.io/lgtm/grade/javascript/github/sKawashima/cocktailMenu?style=flat-square)](https://lgtm.com/projects/g/sKawashima/cocktailMenu/context:javascript)
 [![LGTM-alert](https://img.shields.io/lgtm/alerts/github/sKawashima/cocktailMenu?style=flat-square)](https://lgtm.com/projects/g/sKawashima/cocktailMenu/alerts/)
 
