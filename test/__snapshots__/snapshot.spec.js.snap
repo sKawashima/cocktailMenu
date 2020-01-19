@@ -1,35 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots atoms/Input simple 1`] = `
-<input
-  class="input"
-/>
-`;
-
-exports[`Storyshots atoms/Label simple 1`] = `
-<label
-  class="label"
->
-  カクテル名
-</label>
-`;
-
-exports[`Storyshots atoms/SelectBox simple 1`] = `
-<select
-  class="select"
->
-  <option>
-    1st
-  </option>
-  <option>
-    2nd
-  </option>
-  <option>
-    3rd
-  </option>
-</select>
-`;
-
 exports[`Storyshots example/Button with some emoji 1`] = `
 <button
   style="border: 1px solid #eee; border-radius: 3; background-color: rgb(255, 255, 255); cursor: pointer; font-size: 15; padding: 3px 10px;"
