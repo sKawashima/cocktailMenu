@@ -1,8 +1,6 @@
 <template lang="pug">
-div
-  h2 list
-  section.wrapper
-    Cocktail(v-for='cocktail in cocktails' :cocktail='cocktail')
+section.cocktailWrapper
+  Cocktail(v-for='cocktail in cocktails' :cocktail='cocktail')
 </template>
 
 <script lang="ts">
@@ -54,3 +52,11 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="sass" scoped>
+.cocktailWrapper
+  margin: 24px
+  display: grid
+  grid-gap: 24px
+  grid-template-columns: 1fr 1fr 1fr
+</style>
