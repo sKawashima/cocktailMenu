@@ -59,4 +59,8 @@ export default Vue.extend({
   display: grid
   grid-gap: 24px
   grid-template-columns: 1fr 1fr 1fr
+  @media screen and (max-width: 960px)
+    grid-template-columns: 1fr 1fr
+  @media screen and (max-width: 600px)
+    grid-template-columns: 1fr
 </style>
