@@ -13,6 +13,7 @@ section.cocktail
   p.glass {{ cocktail.glass }}
   //- a(:href='cocktail.sourceUrl') source
   //- p {{ cocktail.color }}
+  //- TODO: colorに併せて表示テーマカラー$themeを変更する
 </template>
 
 <script>
