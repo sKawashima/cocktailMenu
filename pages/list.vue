@@ -1,17 +1,6 @@
 <template lang="pug">
-div
-  h2 list
-  ul
-    li(v-for='cocktail in cocktails')
-      p {{ cocktail.name}}
-      p {{ cocktail.alcohol }}
-      p {{ cocktail.base }}
-      p {{ cocktail.color }}
-      p {{ cocktail.taste }}
-      p 材料
-      ul
-        li(v-for='material in cocktail.materials')
-          p {{ material.name }}
+section.cocktailWrapper
+  Cocktail(v-for='cocktail in cocktails' :cocktail='cocktail')
 </template>
 
 <script lang="ts">
@@ -19,9 +8,15 @@ import Vue from 'vue'
 import * as firebase from 'firebase/app'
 import 'firebase/firestore'
 
+import Cocktail from '@/components/Cocktail'
+
 let vm
 
 export default Vue.extend({
+  components: {
+    Cocktail
+  },
+
   data: () => {
     return {
       cocktails: []
@@ -57,3 +52,15 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="sass" scoped>
+.cocktailWrapper
+  margin: 24px
+  display: grid
+  grid-gap: 24px
+  grid-template-columns: 1fr 1fr 1fr
+  @media screen and (max-width: 960px)
+    grid-template-columns: 1fr 1fr
+  @media screen and (max-width: 600px)
+    grid-template-columns: 1fr
+</style>
