@@ -37,6 +37,7 @@ $gray-3: #828282
   border: 1px solid $theme
   border-top: 8px solid $theme
   padding: 16px
+  line-height: 1.7
 
 .alcohol,
 .taste,
