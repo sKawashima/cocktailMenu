@@ -25,7 +25,7 @@
     "reset-css": "^5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.9.6",
     "@nuxtjs/eslint-config": "^2.0.2",
     "@nuxtjs/eslint-module": "^1.2.0",
     "@storybook/addon-a11y": "^5.3.18",
