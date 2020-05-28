@@ -34,7 +34,7 @@
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addon-storyshots": "^5.3.18",
     "@storybook/addon-viewport": "^5.3.19",
-    "@storybook/addons": "^5.3.18",
+    "@storybook/addons": "^5.3.19",
     "@storybook/cli": "^5.3.18",
     "@storybook/vue": "^5.3.19",
     "@vue/test-utils": "^1.0.3",
