@@ -17,10 +17,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: yarn generate
       run: |
-        npm i
-        npm run generate
+        yarn
+        yarn generate
       env:
         CI: true
     - name: Slack Comment
