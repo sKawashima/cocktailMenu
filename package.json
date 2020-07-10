@@ -19,7 +19,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/pwa": "^2.6.0",
-    "firebase": "^7.15.5",
+    "firebase": "^7.16.0",
     "nuxt": "^2.9.2",
     "pug-plain-loader": "^1.0.0",
     "reset-css": "^5.0.1"
