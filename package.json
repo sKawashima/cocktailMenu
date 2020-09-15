@@ -28,7 +28,7 @@
     "@babel/core": "^7.11.1",
     "@nuxtjs/eslint-config": "^2.0.2",
     "@nuxtjs/eslint-module": "^2.0.0",
-    "@storybook/addon-a11y": "^6.0.20",
+    "@storybook/addon-a11y": "^6.0.21",
     "@storybook/addon-actions": "^5.3.13",
     "@storybook/addon-knobs": "^6.0.20",
     "@storybook/addon-links": "^6.0.12",
