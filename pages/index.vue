@@ -1,6 +1,6 @@
 <template lang="pug">
 section.cocktailWrapper
-  Cocktail(v-for='cocktail in cocktails' :cocktail='cocktail')
+  Cocktail(v-for='cocktail in cocktails' :cocktail='cocktail' :key='cocktail.id')
 </template>
 
 <script lang="ts">

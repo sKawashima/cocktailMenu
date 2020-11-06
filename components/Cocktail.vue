@@ -1,5 +1,5 @@
 <template lang="pug">
-section.cocktail
+section.cocktail(:key='cocktail.key')
   h3.heading
     span.alcohol {{ cocktail.alcohol }}
     span.taste {{ cocktail.taste }}
@@ -22,7 +22,8 @@ export default {
     cocktail: {
       type: Object,
       default: () => ({}),
-      required: false
+      required: false,
+      key: Object
     }
   }
 }
