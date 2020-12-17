@@ -18,7 +18,7 @@
     "@nuxtjs/pwa": "^3.2.2",
     "axios": "^0.21.0",
     "firebase": "^8.2.0",
-    "nuxt": "^2.14.7",
+    "nuxt": "^2.14.12",
     "pug-plain-loader": "^1.1.0",
     "reset-css": "^5.0.1"
   },
