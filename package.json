@@ -14,7 +14,7 @@
     "deploy": "npm run lint;npm run generate;firebase deploy"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.0",
+    "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/pwa": "^3.3.5",
     "axios": "^0.21.1",
     "firebase": "^8.2.5",
